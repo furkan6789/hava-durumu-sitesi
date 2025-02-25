@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye Hava Durumu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-icons/dist/umd/lucide.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <i data-lucide="cloud-sun" class="weather-icon"></i>
+                Türkiye Hava Durumu
+            </h1>
+            <p>81 İl için Güncel Hava Durumu</p>
+        </header>
+
+        <div class="content">
+            <!-- Şehir Seçimi -->
+            <div class="city-panel">
+                <div class="search-box">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" id="citySearch" placeholder="Şehir Ara...">
+                </div>
+                <div class="city-list" id="cityList">
+                    <!-- Şehirler JavaScript ile eklenecek -->
+                </div>
+            </div>
+
+            <!-- Hava Durumu Gösterimi -->
+            <div class="weather-panel">
+                <div class="weather-header">
+                    <div class="location">
+                        <i data-lucide="map-pin"></i>
+                        <h2 id="selectedCity">İstanbul</h2>
+                    </div>
+                    <div class="weather-icon-large" id="weatherIcon">
+                        <i data-lucide="sun"></i>
+                    </div>
+                </div>
+
+                <div class="weather-info">
+                    <div class="info-card">
+                        <i data-lucide="thermometer"></i>
+                        <p>Sıcaklık</p>
+                        <h3 id="temperature">20°C</h3>
+                    </div>
+                    <div class="info-card">
+                        <i data-lucide="droplets"></i>
+                        <p>Nem</p>
+                        <h3 id="humidity">65%</h3>
+                    </div>
+                    <div class="info-card">
+                        <i data-lucide="wind"></i>
+                        <p>Rüzgar</p>
+                        <h3 id="windSpeed">12 km/s</h3>
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <h3>Günlük Tahmin</h3>
+                    <p id="forecastText">
+                        Veriler yükleniyor...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
